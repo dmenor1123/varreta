@@ -95,7 +95,7 @@ set_timezone ()
 
 
     if [ "$zone" = "BRASIL Brasilia" ]; then
-      echo "Ã© um arquivo, setar timezone BRASIL"
+      echo "é um arquivo, setar timezone BRASIL"
       directory=$directory/America/Sao_Paulo  
       break
     fi
@@ -104,7 +104,7 @@ set_timezone ()
 
 
     if [ -f "$directory" ]; then
-      #echo "Ã© um arquivo, setar timezone"
+      #echo "é um arquivo, setar timezone"
       break
     fi
 

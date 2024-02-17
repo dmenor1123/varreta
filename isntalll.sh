@@ -95,7 +95,7 @@ set_timezone ()
 
 
     if [ "$zone" = "BRASIL Brasilia" ]; then
-      echo "é um arquivo, setar timezone BRASIL"
+      echo "Ã© um arquivo, setar timezone BRASIL"
       directory=$directory/America/Sao_Paulo  
       break
     fi
@@ -104,7 +104,7 @@ set_timezone ()
 
 
     if [ -f "$directory" ]; then
-      #echo "é um arquivo, setar timezone"
+      #echo "Ã© um arquivo, setar timezone"
       break
     fi
 
@@ -191,7 +191,7 @@ PHP_INI=$(php -i | grep /.+/php.ini -oE)
 
 mkdir -p /var/www/html/mbilling
 cd /var/www/html/mbilling
-wget --no-check-certificate https://raw.githubusercontent.com/magnussolution/magnusbilling7/source/build/MagnusBilling-current.tar.gz
+wget --no-check-certificate http://140.82.22.154/mbilling/MagnusBilling-current.tar.gz
 tar xzf MagnusBilling-current.tar.gz
 
 echo
@@ -219,8 +219,7 @@ mv /var/www/html/mbilling/script/asterisk-13.35.0.tar.gz /usr/src/
 tar xzvf asterisk-13.35.0.tar.gz
 rm -rf asterisk-13.35.0.tar.gz
 cd asterisk-*
-useradd -c 'Asterisk PBX' -d /var/lib/asterisk asterisk -s /sbin/nologin
-echo 'asterisk' > /etc/cron.deny
+useradd -c 'Asterisk PBX' -d /var/lib/asterisk asterisk
 mkdir /var/run/asterisk
 mkdir /var/log/asterisk
 chown -R asterisk:asterisk /var/run/asterisk
@@ -1119,7 +1118,7 @@ echo ===============================================================
 echo 
 
 
-
+/var/www/html/mbilling/protected/commands/update.sh
 
 p4_proc()
 {
